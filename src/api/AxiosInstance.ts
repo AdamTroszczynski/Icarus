@@ -12,6 +12,7 @@ class AxiosInstance {
   public async post(data: object): Promise<ApiResponse> {
     const response = await this.axiosObject.post(URL, qs.stringify({ ...STATIC_DATA, ...data }), {
       headers: HEADERS,
+      withCredentials: false,
     });
     return response.data;
   }

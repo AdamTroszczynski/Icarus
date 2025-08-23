@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-gold: #d4af37;
+  --color-primary-white: #ffffff;
+  --color-primary-darkBlue: #1e2735;
+  --color-secondary-darkBlue: #293342;
+  --color-primary-grey: #a6abb3;
+  --color-secondary-grey: #79808e;
+  --color-primary-dark: #111827;
+
+  --font-roboto: 'Roboto', sans-serif;
+
+  --font-inter: 'Inter', sans-serif;
+}

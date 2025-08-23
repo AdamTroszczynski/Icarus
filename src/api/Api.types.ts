@@ -4,7 +4,7 @@ export type ApiResponse = {
   error: string;
 };
 
-export const URL = '/api/request.php';
+export const URL = 'https://pl35.herozerogame.com/request.php';
 
 export const HEADERS = {
   'Content-Type': 'application/x-www-form-urlencoded',
