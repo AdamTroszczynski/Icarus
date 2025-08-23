@@ -17,10 +17,10 @@ export const useAuth = () => {
     if (trainings) trainingsStore.SET_TRAININGS(trainings.map((el: any) => MapTrainings(el)));
   };
 
-  const login = async (email: string, password: string): Promise<void> => {
+  const login = async (email: string, password: string): Promise<boolean> => {
     const response = await LoginService(email, password);
 
-    if (response.error) return;
+    if (response.error) return false;
 
     const { user } = response.data;
     Cookies.set(
@@ -32,17 +32,19 @@ export const useAuth = () => {
     localStorage.setItem('existing_user_id', user.id.toString());
 
     setResponseData(response.data);
+    return true;
   };
 
-  const autoLogin = async (): Promise<void> => {
+  const autoLogin = async (): Promise<boolean> => {
     const existing_session_id = localStorage.getItem('existing_session_id') as string;
     const existing_user_id = localStorage.getItem('existing_user_id') as string;
-    if (!existing_session_id || !existing_user_id) return;
+    if (!existing_session_id || !existing_user_id) return false;
 
     const response = await AutoLoginService(existing_session_id, existing_user_id);
-    if (response.error) return;
+    if (response.error) return false;
 
     setResponseData(response.data);
+    return true;
   };
 
   const logout = (): void => {
