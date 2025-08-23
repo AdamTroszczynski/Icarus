@@ -1,39 +1,83 @@
-# HeroZeroBotv2
+# Icarus
 
-This template should help get you started developing with Vue 3 in Vite.
+**Automated API Interaction System for Users**
 
-## Recommended IDE Setup
+Icarus is a Vue 3 + Vite application designed to automate interactions with APIs, providing a seamless and efficient workflow for application users. This project demonstrates advanced front-end and full-stack integration techniques.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Type Support for `.vue` Imports in TS
+## 🛠 Technologies
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Vue 3** (Composition API, TypeScript)
+- **Nuxt 3**
+- **Pinia** (state management)
+- **TailwindCSS** & **PrimeVue** (UI)
+- **Node.js / Express** (API integration)
+- **PostgreSQL / MongoDB** (data persistence)
+- **JWT authentication**
+- **Vite** (build tooling)
+- **Vitest & Cypress** (unit & e2e testing)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 💻 Project Setup
 
-## Project Setup
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 🔹 Development Mode (Hot-Reload)
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 🔹 Build for Production
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### 🔹 Linting
 
 ```sh
 npm run lint
 ```
+
+### 🔹 Type Checking
+
+```sh
+npm run type-check
+```
+
+> Note: TypeScript requires [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) in VSCode for proper `.vue` type support.
+
+---
+
+## 🚀 Features
+
+- Full API interaction automation with customizable workflows.
+- Real-time state management using Pinia.
+- Comprehensive error handling and logging.
+- Modular architecture for easy extension and testing.
+
+---
+
+## ⚙️ Recommended IDE Setup
+
+- [VSCode](https://code.visualstudio.com/)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)
+
+---
+
+## 📖 Customize Configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+---
+
+## 🌐 Live Demo
+
+coming soon
