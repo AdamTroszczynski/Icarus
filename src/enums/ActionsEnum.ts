@@ -6,4 +6,8 @@ export enum ActionsEnum {
   CLAIM_TRAINING_QUEST_REWARD = 'claimTrainingQuestRewards',
   CLAIM_TRAINING_STAR = 'claimTrainingStar',
   FINISH_TRAINING = 'finishTraining',
+  GET_DUEL_OPPONENTS = 'getDuelOpponents',
+  START_DUEL = 'startDuel',
+  CLAIM_DUEL_REWARDS = 'claimDuelRewards',
+  CHECK_FOR_DUEL_COMPLETE = 'checkForDuelComplete',
 }

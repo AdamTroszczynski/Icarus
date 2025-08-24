@@ -6,4 +6,8 @@ export enum AuthEnum {
   claimTrainingQuestRewards = 'beb8deadfe26aef457282967053f4343',
   claimTrainingStar = '8a691b7bcf09de17085a3db110dd25a0',
   finishTraining = 'e87271b83281f6c7be5b479291c81d3c',
+  getDuelOpponents = 'da212b091bd96c44355fa49700c38e35',
+  startDuel = 'f40e173971195cf2724d18051b2e4352',
+  claimDuelRewards = '31bde459a9247164f3b0afe5dbd89214',
+  checkForDuelComplete = '50f2c7ee0c62a165918758c6396cb338',
 }
