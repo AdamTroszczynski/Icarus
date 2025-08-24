@@ -13,7 +13,9 @@
         @submit.prevent
         class="bg-primary-darkBlue border-primary-white/20 flex flex-col gap-4 rounded-2xl border p-7"
       >
-        <MainInput id="login" name="login" placeholder="Wprowadź login"> Login </MainInput>
+        <MainInput type="email" id="email" name="email" placeholder="Wprowadź email">
+          Email
+        </MainInput>
         <MainInput type="password" name="password" id="password" placeholder="Wprowadź hasło">
           Hasło
         </MainInput>
@@ -43,7 +45,7 @@ const router = useRouter();
 
 const loginSchema = toTypedSchema(
   z.object({
-    login: z.string('Pole wymagane'),
+    email: z.string('Pole wymagane'),
     password: z.string('Pole wymagane'),
     code: z
       .string('Pole wymagane')
@@ -55,10 +57,10 @@ const { values, validate, meta, setFieldError } = useForm({ validationSchema: lo
 
 const loginAction = async () => {
   validate();
-  if (meta.value.valid && values.login && values.password) {
-    const isSuccess = await login(values.login, values.password);
+  if (meta.value.valid && values.email && values.password) {
+    const isSuccess = await login(values.email, values.password);
     if (!isSuccess) {
-      setFieldError('login', 'Błędne dane logowania');
+      setFieldError('email', 'Błędne dane logowania');
       return;
     }
     router.push({ name: 'quests' });
